@@ -28,7 +28,6 @@ struct GameView: View {
     }
 }
 
-
 #Preview {
     NavigationView {
         GameView()

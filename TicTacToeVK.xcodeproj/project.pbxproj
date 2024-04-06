@@ -17,10 +17,6 @@
 		152B909D2BC1502D0049C09F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152B909C2BC1502D0049C09F /* Player.swift */; };
 		152B909F2BC150450049C09F /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152B909E2BC150450049C09F /* GameState.swift */; };
 		152B90A22BC150C40049C09F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152B90A12BC150C40049C09F /* Constants.swift */; };
-		152B90A82BC154FA0049C09F /* lightWon.png in Resources */ = {isa = PBXBuildFile; fileRef = 152B90A42BC154FA0049C09F /* lightWon.png */; };
-		152B90A92BC154FA0049C09F /* darkWon.png in Resources */ = {isa = PBXBuildFile; fileRef = 152B90A52BC154FA0049C09F /* darkWon.png */; };
-		152B90AA2BC154FA0049C09F /* light.png in Resources */ = {isa = PBXBuildFile; fileRef = 152B90A62BC154FA0049C09F /* light.png */; };
-		152B90AB2BC154FA0049C09F /* dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 152B90A72BC154FA0049C09F /* dark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +31,6 @@
 		152B909C2BC1502D0049C09F /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		152B909E2BC150450049C09F /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		152B90A12BC150C40049C09F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		152B90A42BC154FA0049C09F /* lightWon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lightWon.png; path = ../../../../../../../Users/sarap005931/Desktop/lightWon.png; sourceTree = "<group>"; };
-		152B90A52BC154FA0049C09F /* darkWon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = darkWon.png; path = ../../../../../../../Users/sarap005931/Desktop/darkWon.png; sourceTree = "<group>"; };
-		152B90A62BC154FA0049C09F /* light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = light.png; path = ../../../../../../../Users/sarap005931/Desktop/light.png; sourceTree = "<group>"; };
-		152B90A72BC154FA0049C09F /* dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dark.png; path = ../../../../../../../Users/sarap005931/Desktop/dark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,10 +145,6 @@
 		152B90A32BC154280049C09F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				152B90A72BC154FA0049C09F /* dark.png */,
-				152B90A52BC154FA0049C09F /* darkWon.png */,
-				152B90A62BC154FA0049C09F /* light.png */,
-				152B90A42BC154FA0049C09F /* lightWon.png */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -219,12 +207,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				152B90AA2BC154FA0049C09F /* light.png in Resources */,
-				152B90A92BC154FA0049C09F /* darkWon.png in Resources */,
 				152B90862BC1405B0049C09F /* Preview Assets.xcassets in Resources */,
 				152B90832BC1405B0049C09F /* Assets.xcassets in Resources */,
-				152B90A82BC154FA0049C09F /* lightWon.png in Resources */,
-				152B90AB2BC154FA0049C09F /* dark.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
