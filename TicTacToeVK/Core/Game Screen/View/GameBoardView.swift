@@ -22,7 +22,3 @@ struct GameBoardView: View {
         .padding(15)
     }
 }
-
-#Preview {
-    GameBoardView(moves: .constant([""]), makeMove: {_ in })
-}

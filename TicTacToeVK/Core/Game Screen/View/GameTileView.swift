@@ -18,6 +18,7 @@ struct GameTileView: View {
 
             backgroundColor
                 .opacity(symbol == "" ? 1 : 0)
+                .animation(.none)
 
             Text(symbol)
                 .font(.system(size: 55))
@@ -42,7 +43,7 @@ struct GameTileView: View {
     }
 
     private var backgroundColor: Color {
-        colorScheme == .dark ? .white : .gray
+        colorScheme == .dark ? .white : .black
     }
 }
 

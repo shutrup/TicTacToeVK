@@ -14,17 +14,17 @@ struct GameView: View {
         VStack {
             GameBoardView(moves: $viewModel.moves, makeMove: viewModel.makeMove)
         }
-        .onChange(of: viewModel.moves) { _ in
-            viewModel.checkWinner()
-        }
-        .alert(isPresented: $viewModel.gameOver) {
+        .alert(isPresented: Binding<Bool>(
+            get: { viewModel.gameOver },
+            set: { _ in }
+        )) {
             Alert(
-                title: Text("Winner"),
-                message: Text(viewModel.msg),
-                dismissButton: .destructive(Text("Play Again"), action: viewModel.restartGame)
+                title: Text(Constants.Game.gameOverTitle),
+                message: Text(viewModel.winnerMessage),
+                dismissButton: .destructive(Text(Constants.Game.playAgainButton), action: viewModel.restartGame)
             )
         }
-        .navigationTitle("Крестики нолики")
+        .navigationTitle(Text(Constants.Game.navigationTitle))
     }
 }
 
