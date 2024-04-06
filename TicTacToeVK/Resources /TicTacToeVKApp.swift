@@ -11,7 +11,10 @@ import SwiftUI
 struct TicTacToeVKApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                GameScreen()
+                    .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+            }
         }
     }
 }
