@@ -12,8 +12,19 @@ struct GameView: View {
 
     var body: some View {
         VStack {
-            GameBoardView(moves: .constant([""]), makeMove: { _ in })
+            GameBoardView(moves: $viewModel.moves, makeMove: viewModel.makeMove)
         }
+        .onChange(of: viewModel.moves) { _ in
+            viewModel.checkWinner()
+        }
+        .alert(isPresented: $viewModel.gameOver) {
+            Alert(
+                title: Text("Winner"),
+                message: Text(viewModel.msg),
+                dismissButton: .destructive(Text("Play Again"), action: viewModel.restartGame)
+            )
+        }
+        .navigationTitle("Крестики нолики")
     }
 }
 

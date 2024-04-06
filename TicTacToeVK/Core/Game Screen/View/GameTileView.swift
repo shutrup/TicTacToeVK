@@ -10,12 +10,13 @@ import SwiftUI
 struct GameTileView: View {
     @Binding var symbol: String
     var makeMove: () -> Void
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         ZStack {
             Color.blue
 
-            Color.white
+            backgroundColor
                 .opacity(symbol == "" ? 1 : 0)
 
             Text(symbol)
@@ -39,8 +40,12 @@ struct GameTileView: View {
             }
         }
     }
+
+    private var backgroundColor: Color {
+        colorScheme == .dark ? .white : .gray
+    }
 }
 
 #Preview {
-    GameTileView(symbol: .constant(""), makeMove: {})
+    GameView()
 }
