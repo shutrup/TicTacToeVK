@@ -2,6 +2,14 @@
 
 Простая, но элегантная игра «Крестики-нолики», полностью созданная на SwiftUI для iOS. Этот проект демонстрирует использование современных практик SwiftUI, архитектуры MVVM и динамическую обработку тем и макетов пользовательского интерфейса.
 
+## Game Themes
+
+### Dark Theme
+<img src="TicTacToeVK/dark.png" width="375" alt="Dark Theme"/>    <img src="TicTacToeVK/darkWon.png" width="375" alt="Dark Theme Won"/>
+
+### Light Theme
+<img src="TicTacToeVK/light.png" width="375" alt="Dark Theme"/>    <img src="TicTacToeVK/lightWon.png" width="375" alt="Dark Theme Won"/>
+
 ## Функции
 
 - **SwiftUI Интерфейс**: Полностью созданный на SwiftUI, демонстрирующий, как программно создавать интерфейсы с помощью новейшей платформы пользовательского интерфейса Apple.
