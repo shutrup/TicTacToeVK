@@ -12,8 +12,7 @@ struct TicTacToeVKApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                GameScreen()
-                    .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+                GameView()
             }
         }
     }
