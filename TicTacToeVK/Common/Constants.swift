@@ -17,4 +17,8 @@ struct Constants {
         static let winnerMessageSuffix = "Выиграл!"
         static let tiedMessage = "Ничья!"
     }
+    
+    struct Grid {
+        static let spacing: CGFloat = 15.0
+    }
 }

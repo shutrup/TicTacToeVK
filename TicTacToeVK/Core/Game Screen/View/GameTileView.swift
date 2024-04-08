@@ -8,32 +8,23 @@
 import SwiftUI
 
 struct GameTileView: View {
+    @Environment(\.colorScheme) private var colorScheme
     @Binding var symbol: String
     var makeMove: () -> Void
-    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         ZStack {
             Color.blue
 
             backgroundColor
-                .opacity(symbol == "" ? 1 : 0)
-                .animation(.none)
 
-            Text(symbol)
-                .font(.system(size: 55))
-                .fontWeight(.heavy)
-                .foregroundColor(.white)
-                .opacity(symbol != "" ? 1 : 0)
+            title
         }
-        .frame(width: GameView.getWidth(), height: GameView.getWidth())
+        .frame(width: width, height: width)
         .cornerRadius(25)
         .rotation3DEffect(
-            .init(degrees: symbol != "" ? 180 : 0),
-            axis: (x: 0.0, y: 1.0, z: 0.0),
-            anchor: .center,
-            anchorZ: 0.0,
-            perspective: 1.0
+            Angle(degrees: symbol != "" ? 180 : 0),
+            axis: (x: .zero, y: 1.0, z: .zero)
         )
         .onTapGesture {
             withAnimation(.smooth) {
@@ -41,12 +32,25 @@ struct GameTileView: View {
             }
         }
     }
-
-    private var backgroundColor: Color {
-        colorScheme == .dark ? .white : .black
-    }
 }
 
-#Preview {
-    GameView()
+private extension GameTileView {
+    @ViewBuilder
+    var backgroundColor: some View {
+        (colorScheme == .dark ? Color.white : Color.black)
+            .opacity(symbol == "" ? 1 : 0)
+            .animation(.none)
+    }
+    
+    var title: some View {
+        Text(symbol)
+            .font(.system(size: 55))
+            .fontWeight(.heavy)
+            .foregroundColor(.white)
+            .opacity(symbol != "" ? 1 : 0)
+    }
+    
+    var width: CGFloat {
+        return (UIScreen.main.bounds.width - 60) / 3
+    }
 }
